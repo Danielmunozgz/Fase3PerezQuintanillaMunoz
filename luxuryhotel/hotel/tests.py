@@ -14,7 +14,7 @@ class ClienteTestCase(TestCase):
                                pais=p1,
                                edad=22,
                                email="daniel@gmail.com",
-                               direccion="Mi casa",
+                               direccion="Mi casa j",
                                password="11992288hc")
     
     def test_Cliente(self):
@@ -30,7 +30,7 @@ class HabitacionTestCase(TestCase):
                                   caracteristicas="h",
                                   descripcion="o",
                                   servicios="l",
-                                  equipamiento="a",
+                                  equipamiento="aj",
                                   image_1='/static/image/luxury/1.jpg',
                                   image_2='/static/image/luxury/3.jpg')
 
@@ -53,7 +53,7 @@ class ClienteFormsTest(TestCase):
                                pais=p,
                                edad=22,
                                email="daniel@gmail.com",
-                               direccion="Mi casa",
+                               direccion="Mi casa j",
                                password="11992288hc")
         c.save()
         data = {'rut': c.rut, 'nombres': c.nombres, 'apellidos': c.apellidos, 'pais': c.pais, 
@@ -69,7 +69,7 @@ class ClienteFormsTest(TestCase):
                                pais=p,
                                edad=22,
                                email="daniel@gmail.com",
-                               direccion="Mi casa",
+                               direccion="Mi casa j",
                                password="")
         c.save()
         data = {'rut': c.rut, 'nombres': c.nombres, 'apellidos': c.apellidos, 'pais': c.pais, 
@@ -86,7 +86,7 @@ class HabitacionFormsTest(TestCase):
                                caracteristicas="h",
                                descripcion="o",
                                servicios="l",
-                               equipamiento="a",
+                               equipamiento="aj",
                                image_1='/static/image/luxury/1.jpg',
                                image_2='/static/image/luxury/3.jpg')
         h.save()
@@ -102,7 +102,7 @@ class HabitacionFormsTest(TestCase):
                                caracteristicas="",
                                descripcion="",
                                servicios="l",
-                               equipamiento="a",
+                               equipamiento="aj",
                                image_1='/static/image/luxury/1.jpg',
                                image_2='/static/image/luxury/3.jpg')
         h.save()
@@ -127,7 +127,7 @@ class ClienteListViewTest(TestCase):
             Cliente.objects.create(
                 rut=f'1995484232 {cliente_rut}',
                 nombres=f'Prueba des {cliente_rut}',
-                apellidos=f'Prueba des {cliente_rut}',
+                apellidos=f'Prueba desj {cliente_rut}',
                 pais=p,
                 edad=22,
                 email=f'Prueba@gmail.com {cliente_rut}',
@@ -170,7 +170,7 @@ class HabitacionListViewTest(TestCase):
                 id_habitacion=1,
                 id_tipo=th,
                 caracteristicas=f'ho {habitacion_id_habitacion}',
-                descripcion=f'la {habitacion_id_habitacion}',
+                descripcion=f'laj {habitacion_id_habitacion}',
                 servicios=f'como {habitacion_id_habitacion}',
                 equipamiento=f'tas {habitacion_id_habitacion}',
                 image_1=document,
