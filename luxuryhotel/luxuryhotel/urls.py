@@ -18,12 +18,23 @@ from django.urls import path
 from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic.base import TemplateView
 
+#importamos la app de django-rest 
+from rest_framework import routers
+from API import views
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hotel/', include('hotel.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('', TemplateView.as_view(template_name='index.html'), name='home'),
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
 
 if settings.DEBUG:
