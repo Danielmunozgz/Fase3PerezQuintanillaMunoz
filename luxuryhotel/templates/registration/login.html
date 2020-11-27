@@ -1,0 +1,36 @@
+{% extends 'base_generic.html' %}
+
+
+{% block content %}
+
+{% load static %}
+<link href="{% static 'css/stylelogin.css' %}" rel="stylesheet">
+
+<div class="container">
+    <div class="section-headline registrarse text-center">  
+        <h2>Ingresar</h2>
+    </div>
+    <div class="login-page">
+        
+        <div class="form">
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                    {% if form.errors %}
+                        <p style="color: red; font-size: 10px;">Usuario y/o contraseña incorrecto. Inténtalo de nuevo.</p>
+                    {% endif %}
+
+                    <td><label class="label"> Usuario: </label> </td>
+                    <td>{{ form.username }}</td>
+
+                    <td><label class="label"> Contraseña: </label></td>
+                    <td>{{ form.password }}</td>
+                    <br>
+                    <button class="boton" type="submit" value="login" > Ingresar </button>
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

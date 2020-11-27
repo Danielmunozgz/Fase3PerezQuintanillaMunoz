@@ -1,0 +1,369 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block title %} <title>Luxury Hotel International</title> {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    {% load static %}
+    <link rel="icon" type="image/icon" href="{% static 'img/icono.ico' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    
+</head>
+
+<div class="habitaciones">
+    <div class="section-headline habitaciones text-center">
+        <h2>habitaciones</h2>
+    </div>
+    <div class="hab1">
+        <div class="container">
+            <h3>Luxury Suite</h3>
+            <div id="ha1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#ha1" data-slide-to="0" class="active"></li>
+                    <li data-target="#ha1" data-slide-to="1"></li>
+                    <li data-target="#ha1" data-slide-to="2"></li>
+                </ol>
+                      
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{% static 'img/luxury/1.jpg' %}">
+                    </div>
+                      
+                    <div class="item">
+                        <img src="{% static 'img/luxury/2.jpg' %}">
+                    </div>
+
+                    <div class="item">
+                        <img src="{% static 'img/luxury/3.jpg' %}">
+                    </div>
+                </div>
+                      
+                <a class="left carousel-control" href="#ha1" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#ha1" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="row">
+                <div class="desc-hab">
+                    <div class="col-md-8">
+                        <h4>Descripción</h4>
+                            <p>
+                                Siente el placer de despertarte cada mañana en esta maravillosa suite. 
+                                Una elegante habitación de 76 m2 divididos en varias estancias: salón, comedor y dormitorio principal con cama king-size 
+                                que destaca por sus exclusivos servicios The Level.
+                                <br>
+                                Su sofisticada decoración en tonos claros y matices cobrizos combina a la perfección con el verde jardín tropical que podrás ver desde su terraza 
+                                o balcón privado. Date un capricho disfrutando de su fabulosa bañera de hidromasaje que será preparada previa reserva o disfruta del servicio de 
+                                habitaciones las 24 horas del día. Detalles que harán tus vacaciones en el Caribe difíciles de olvidar.  
+                            </p>
+                        <br>
+                        <h4>Servicios</h4>
+                        <li>Sala privada para check-in, check-out y asistencia</li>
+                        <li>Transporte exclusivo hacia la playa privada</li>
+                        <li>Acceso a la sala VIP que ofrece: desayuno continental diario, acceso a Internet, servicio de café y té todo el día, bebidas premium, servicio de coctelería y bocadillos durante el día; así como servicio de asistencia por parte de nuestro concierge</li>
+                        <li>Servicio a la habitación de 24 horas</li>
+                        <li>Servicio de cobertura nocturna</li>
+                        <li>Servicio de lavandería (*)</li>
+                        <li>Servicio de concierge</li>
+                        <li>Menú de almohadas</li>
+                        <li>Menú de aromas</li>
+                        <li>Preparación de tina (bañera) de hidromasaje (bajo reservación)</li>
+                        <li>Reservaciones preferenciales para golf, canchas de tenis y otras actividades</li>
+
+                        <h4>Equipamiento</h4>
+                        <li>Bañera de hidromasaje en la habitación</li>
+                        <li>Ventilador de techo y aire acondicionado de control individual</li>
+                        <li>TV por cable, OLED 65 pulgadas (65") (dos por habitación)</li>
+                        <li>Teléfono con línea directa</li>
+                        <li>Caja fuerte</li>
+                        <li>Salón con sofá cama</li>
+                        <li>Comedor</li>
+                        <li>Nevera grande de dos puertas, con agua, refrescos y cervezas</li>
+                        <li>Plancha y tabla de planchar</li>
+                        <li>Acceso a Internet en la habitación</li>
+                        <li>Habitación conectada con una The Level Master Suite</li>
+                        <li>Baño completo con amenidades The Level</li>
+                        <li>Ducha Spa europea</li>
+                        <li>Batas de baño y pantuflas&nbsp;</li>
+                        <li>Secador de pelo</li>
+                        <br>
+                        <br>
+                        <a class="btn btn-primary" href="{% url 'login' %}" role="button">RESERVAR ESTA HABITACIÓN</a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="caracteristicas">
+                        <h4>Características</h4>
+                        <ul id="caracteristicas_habitacion">
+                            <li><i class="fa fa-shower" aria-hidden="true"></i> Bañera de Hidromasaje</li>
+                            <li><i class="fa fa-television" aria-hidden="true"></i> Doble Pantalla OLED HD TV (65")</li>
+                            <li><i class="fa fa-snowflake-o" aria-hidden="true"></i> Aire acondicionado</li>
+                            <li><i class="fa fa-pagelines" aria-hidden="true"></i> Vistas Jardín</li>
+                            <li><i class="fa fa-volume-up" aria-hidden="true"></i> Parlantes hi-fi</li>
+                            <li><i class="fa fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+                            <li><i class="fa fa-lock" aria-hidden="true"></i> Caja fuerte con capacidad para ordenador portátil</li>
+                        </ul>
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hab2">
+        <div class="container">
+            <h3 style="text-align: center;">Deluxe Room</h3>
+                <div id="ha2" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#ha2" data-slide-to="0" class="active"></li>
+                        <li data-target="#ha2" data-slide-to="1"></li>
+                    </ol>
+                    
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{% static 'img/deluxe/21.jpg' %}">
+                            
+                        </div>
+                      
+                        <div class="item">
+                            <img src="{% static 'img/deluxe/22.jpg' %}">
+                        </div>
+                    </div>
+                      
+                    <a class="left carousel-control" href="#ha2" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#ha2" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            <div class="row">
+                <div class="desc-hab">
+                    <div class="col-md-8">
+                        <h4>Descripción</h4>
+                        <p>
+                            Rodeada de jardines tropicales, encuentra el descanso en esta agradable habitación equipada con todo lo necesario para que tu estancia sea increíble. 
+                            Dos espacios contiguos repartidos en 42 m2 con cama king-size o dos camas twin y una agradable terraza donde relajarte con las bonitas vistas al jardín.
+
+                            Su decoración en tonos claros y su mobiliario están pensados para ofrecerte un descanso único además sus increíbles vistas harán de tu estancia todo un sueño. 
+                        </p>
+                        <br>
+                        <h4>Servicios</h4>
+                        <li>Servicio de lavandería</li>
+                        <li>Servicio de habitaciones</li>
+
+                        <h4>Equipamiento</h4>
+                        <li>Ventilador de techo y aire acondicionado</li>
+                        <li>TV OLED 55 pulgadas, por cable</li>
+                        <li>Salón con sofá cama</li>
+                        <li>Bañera Spa Europa</li>
+                        <li>Teléfono con línea directa</li>
+                        <li>Caja fuerte</li>
+                        <li>Café y cafetera</li>
+                        <li>Plancha y tabla de planchar</li>
+                        <li>Wi-Fi</li>
+                        <li>Minibar con refrescos y agua de cortesía</li>
+                        <li>Ducha</li>
+                        <li>Amenidades de baño</li>
+                        <li>Secador de pelo</li>
+                        <br>
+                        <br>
+                        <a class="btn btn-primary" href="{% url 'login' %}" role="button">RESERVAR ESTA HABITACIÓN</a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="caracteristicas">
+                        <h4>Características</h4>
+                        <ul id="caracteristicas_habitacion">
+                            <li><i class="fa fa-television" aria-hidden="true"></i> Pantalla OLED TV (55")</li>
+                            <li><i class="fa fa-snowflake-o" aria-hidden="true"></i> Aire acondicionado</li>
+                            <li><i class="fa fa-pagelines" aria-hidden="true"></i> Vistas Jardín</li>
+                            <li><i class="fa fa-volume-up" aria-hidden="true"></i> Parlantes hi-fi</li>
+                            <li><i class="fa fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+                            <li><i class="fa fa-umbrella" aria-hidden="true"></i> Paraguas y Planchado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hab3">
+        <div class="container">
+            <h3 style="text-align: center;">Ocean Room</h3>
+                <div id="ha3" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#ha3" data-slide-to="0" class="active"></li>
+                        <li data-target="#ha3" data-slide-to="1"></li>
+                    </ol>
+                      
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="{% static 'img/ocean/31.jpg' %}">
+                            
+                        </div>
+                      
+                        <div class="item">
+                            <img src="{% static 'img/ocean/32.jpg' %}">
+                        </div>
+                    </div>
+                      
+                    <a class="left carousel-control" href="#ha3" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#ha3" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            <div class="row">
+                <div class="desc-hab">
+                    <div class="col-md-8">
+                        <h4>Descripción</h4>
+                        <p>
+                            Rodeada de jardines tropicales, encuentra el descanso en esta agradable habitación equipada con todo lo necesario para que tu estancia sea increíble. 
+                            Dos espacios contiguos repartidos en 40 m2 con cama Queen y una agradable terraza donde relajarte con las bonitas vistas al jardín.
+
+                            Su decoración en tonos claros y su mobiliario están pensados para ofrecerte un descanso único además sus increíbles vistas harán de tu estancia todo un sueño. 
+                        </p>
+                        <br>
+                        <h4>Servicios</h4>
+                        <li>Servicio de lavandería (*)</li>
+                        <li>Servicio de habitaciones (*)</li>
+
+                        <h4>Equipamiento</h4>
+                        <li>Ventilador de techo y aire acondicionado</li>
+                        <li>TV OLED 46 pulgadas por cable</li>
+                        <li>Teléfono con línea directa</li>
+                        <li>Caja fuerte</li>
+                        <li>Café y cafetera</li>
+                        <li>Plancha y tabla de planchar</li>
+                        <li>Wi-Fi</li>
+                        <li>Minibar con refrescos y agua de cortesía</li>
+                        <li>Ducha</li>
+                        <li>Amenidades de baño</li>
+                        <li>Secador de pelo</li>
+                        <br>
+                        <p>(*) Incluye costos adicionales</p>
+                        <br>
+                        <a class="btn btn-primary" href="{% url 'login' %}" role="button">RESERVAR ESTA HABITACIÓN</a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="caracteristicas">
+                        <h4>Características</h4>
+                        <ul id="caracteristicas_habitacion">
+                            <li><i class="fa fa-television" aria-hidden="true"></i> Pantalla Plana TV</li>
+                            <li><i class="fa fa-snowflake-o" aria-hidden="true"></i> Aire acondicionado</li>
+                            <li><i class="fa fa-pagelines" aria-hidden="true"></i> Vistas Jardín</li>
+                            <li><i class="fa fa-volume-up" aria-hidden="true"></i> Parlantes hi-fi</li>
+                            <li><i class="fa fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+                            <li><i class="fa fa-umbrella" aria-hidden="true"></i> Paraguas y Planchado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hab4">
+        <div class="container">
+            <h3 style="text-align: center;">Garden Room</h3>
+            <div id="ha4" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#ha4" data-slide-to="0" class="active"></li>
+                    <li data-target="#ha4" data-slide-to="1"></li>
+                </ol>
+                      
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="{% static 'img/garden/41.jpg' %}">
+                    </div>
+                      
+                    <div class="item">
+                        <img src="{% static 'img/garden/42.jpg' %}">
+                    </div>
+                </div>
+                    
+                <a class="left carousel-control" href="#ha4" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#ha4" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="row">
+                <div class="desc-hab">
+                    <div class="col-md-8">
+                        <h4>Descripción</h4>
+                        <p>
+                            Rodeada de jardines tropicales, encuentra el descanso en esta agradable habitación equipada con todo lo necesario para que tu estancia sea increíble. 
+                            Dos espacios contiguos repartidos en 36 m2 con cama de 2 plazas y una agradable terraza donde relajarte con las bonitas vistas al jardín.
+
+                            Su decoración en tonos claros y su mobiliario están pensados para ofrecerte un descanso único además sus increíbles vistas harán de tu estancia todo un sueño. 
+                        </p>
+                        <br>
+                        <h4>Servicios</h4>
+                        <li>Servicio de lavandería (*)</li>
+                        <li>Servicio de habitaciones (*)</li>
+
+                        <h4>Equipamiento</h4>
+                        <li>Ventilador de techo y aire acondicionado</li>
+                        <li>TV LCD por cable</li>
+                        <li>Teléfono con línea directa</li>
+                        <li>Caja fuerte</li>
+                        <li>Café y cafetera</li>
+                        <li>Plancha y tabla de planchar</li>
+                        <li>Wi-Fi</li>
+                        <li>Minibar con refrescos y agua de cortesía</li>
+                        <li>Ducha</li>
+                        <li>Amenidades de baño</li>
+                        <li>Secador de pelo</li>
+                        <br>
+                        <p>(*) Incluye costos adicionales</p>
+                        <br>
+                        <a class="btn btn-primary" href="{% url 'login' %}" role="button">RESERVAR ESTA HABITACIÓN</a>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="caracteristicas">
+                        <h4>Características</h>
+                        <ul id="caracteristicas_habitacion">
+                            <li><i class="fa fa-television" aria-hidden="true"></i> Pantalla Plana TV</li>
+                            <li><i class="fa fa-snowflake-o" aria-hidden="true"></i> Aire acondicionado</li>
+                            <li><i class="fa fa-pagelines" aria-hidden="true"></i> Vistas Jardín</li>
+                            <li><i class="fa fa-volume-up" aria-hidden="true"></i> Parlantes hi-fi</li>
+                            <li><i class="fa fa-wifi" aria-hidden="true"></i> Wi-Fi</li>
+                            <li><i class="fa fa-umbrella" aria-hidden="true"></i> Paraguas y Planchado</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

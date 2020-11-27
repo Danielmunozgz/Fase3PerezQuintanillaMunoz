@@ -1,0 +1,372 @@
+/* GENERAL */
+html{
+    width: 100%;
+}
+
+body{
+    /* url("../img/xxxxx.jpg")*/
+    background: white;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0 0 15px;
+    color: #444;
+    font-weight: 500;
+}
+
+#slider{
+    max-width: max-content;
+}
+/* FIN GENERAL */
+
+
+/*NAVEGACION*/
+.navbar{
+    margin: 0px 0px 0px !important;
+    border-radius: 0% !important;
+}
+
+.navbar-header span{
+    color: #3EC1D5;
+}
+
+.navbar-header:hover{
+    cursor: pointer;
+}
+
+/*FIN NAVEGACION*/
+
+/* TITULOS */
+.section-headline h2 {
+    display: inline-block;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+    position: relative;
+    text-transform: capitalize;
+    margin-top: 20px;
+}
+
+.section-headline h2::after {
+    border: 1px solid #333;
+    bottom: -20px;
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 40%;
+}
+
+.section-headline h2{
+    color: #333;
+    margin-bottom: 25px;
+}
+/*FIN TITULOS*/
+
+
+
+
+/* PRESENTACIÓN */
+.presentacion{
+    background-color: #f9f9f9;
+    padding-bottom: 50px;
+}
+
+.pres-junto{
+    display: block;
+}
+
+.pres-junto img{
+    float: right;
+}
+  
+.pres-junto ul li {
+    color: #444;
+    display: block;
+    padding: 5px 0;
+}
+  
+.pres-junto ul li i {
+    color: #3EC1D5;
+    padding-right: 10px;
+    font-size: 12px;
+}
+  
+.pres-junto p {
+    color: #444;
+    text-align: justify;
+    text-justify: distribute;
+    padding-right: 50px;
+}
+/*FIN PRESENTACIÓN*/
+
+/* ELIGENOS */
+.especificaciones{
+    background-color: white;
+    padding-bottom: 60px;
+}
+.especificaciones h3{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+.especificaciones p{
+    text-align: center;
+}
+
+/*FIN ELÍGENOS*/
+
+/* SERVICIOS */
+.servicios{
+    background-color: #f9f9f9;
+    padding-bottom: 40px;
+    
+}
+.servicios h3{
+    text-align: center;
+}
+
+.servicios.serv-det p{
+    text-align: justify;
+    padding-top: 40px;
+}
+
+.servicios span{
+    text-align: center;
+}
+
+.servicios i{
+    display: block;
+    text-align: center;
+    padding: 5px;
+}
+
+.serv-det{
+    margin-top: 40px;
+}
+
+.serv-det p{
+    text-align: center;
+}
+
+.row.second-row {
+    margin-top: 40px;
+}
+
+/*FIN SERVICIOS*/
+
+/*HOSPEDAJE*/
+
+.desc-hab{
+    text-align: justify;
+    padding-right: 20px;
+}
+
+.hab1{
+    background-color: #f9f9f9;
+    border-bottom-style: solid;
+}
+
+.hab2{
+    background-color: rgb(255, 236, 214);
+    border-bottom-style: solid;
+}
+
+.hab3{
+    background-color: #f9f9f9;
+    border-bottom-style: solid;
+}
+
+.hab4{
+    background-color: rgb(255, 236, 214);
+}
+
+.caracteristicas{
+    border-left-style: dotted;
+    padding-left: 20px;
+}
+
+.caracteristicas ul{
+    margin-left: -20px;
+}
+.caracteristicas li {
+    list-style: none;
+}
+
+.habitaciones h3{
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.habitaciones h3:hover{
+    color: #3EC1D5;
+}
+
+.habitaciones h4{
+    width: fit-content;
+    font-weight: bold;
+    border-bottom: #333;
+    border-bottom-style: solid;
+    margin-top: 10px;
+}
+
+/* FIN HOSPEDAJE*/
+
+/*FOOTER*/
+
+.fin{
+    padding: 40px;
+    color: #f9f9f9;
+    background: #333;
+}
+
+.tit-footer h2 {
+    color: #f9f9f9;
+    font-size: 28px;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.tit-footer h3{
+    color: #f9f9f9;
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.fin span{
+    color: #3EC1D5;
+    font-weight: bold;
+}
+
+.i-footer{
+    margin-top: 30px;
+}
+
+.i-footer a:hover{
+    background-color: #3EC1D5;
+}
+
+.i-footer ul li {
+    display: inline-block;
+}
+
+.i-footer ul li a {
+    border: 1px solid #3EC1D5;
+    color: #f9f9f9;
+    display: inline-block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 38px;
+    margin-right: 5px;
+    text-align: center;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.des-footer{
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.img-footer img{
+    float: left;
+    padding: 1px;
+    width: 33.33%;
+}
+
+.fin-cr{
+    background-color: rgb(170, 170, 170);
+}
+
+.copyright{
+    margin-top: 10px;
+}
+/* FIN FOOTER*/
+
+/*REGISTRO*/
+
+.registrof{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cuenta h2{
+    margin-bottom: 20px;
+}
+
+.cuenta input{
+    margin-bottom: 20px;
+    border-style: groove;
+}
+
+.cuenta input:hover{
+    border-color: #3EC1D5;
+}
+
+.cuenta label{
+    color: #3EC1D5;
+}
+
+.cuenta button{
+    width: 160px;
+    height: 30px;
+    background-color: #333;
+    color: white;
+}
+
+.crear-op{
+    margin-top: 80px;
+}
+
+.crear-op button{
+    margin: 10px;
+}
+
+.fb button{
+    width: 250px;
+    height: 58px;
+    background-color: royalblue;
+    color: white;
+    border-style: solid;
+    clear: both;
+    float: left;
+}
+
+.ggp button{
+    width: 250px;
+    height: 58px;
+    background-color: orangered;
+    color: white;
+    border-style: solid;
+    clear: both;
+    float: left;
+}
+
+.tw button{
+    width: 250px;
+    height: 58px;
+    background-color: rgb(0, 172, 238);
+    color: white;
+    border-style: solid;
+    clear: both;
+    float: left;
+}
+
+.rbtn button{
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #333;
+    color: #f9f9f9;
+    width: 200px;
+    height: 40px;
+}
+
+/* FIN REGISTRO*/

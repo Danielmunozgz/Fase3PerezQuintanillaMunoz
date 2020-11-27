@@ -1,0 +1,6 @@
+SuperUser:
+
+User: danielm
+Pass: 11992288hc
+
+http://127.0.0.1:8000/hotel/

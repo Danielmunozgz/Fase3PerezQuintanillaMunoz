@@ -1,0 +1,194 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block title %} <title>Luxury Hotel International</title> {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    {% load static %}
+    <link rel="icon" type="image/icon" href="{% static 'img/icono.ico' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    
+</head>
+
+<!--Carrusel-->
+<div id="Slider" class="carousel slide" data-ride="carousel">
+    <!-- Circulitos del slider -->
+    <ol class="carousel-indicators">
+        <li data-target="#Slider" data-slide-to="0" class="active"></li>
+        <li data-target="#Slider" data-slide-to="1"></li>
+        <li data-target="#Slider" data-slide-to="2"></li>
+        <li data-target="#Slider" data-slide-to="3"></li>
+    </ol>
+          
+    <!-- Fotos del slider -->
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="{% static 'img/slider/sli1.jpg' %}">
+        </div>
+          
+        <div class="item">
+            <img src="{% static 'img/slider/sli2.jpg' %}">
+        </div>
+          
+        <div class="item">
+            <img src="{% static 'img/slider/sli3.jpg' %}">
+        </div>
+
+        <div class="item">
+            <img src="{% static 'img/slider/sli4.jpg' %}">
+        </div>
+    </div>
+          
+    <!-- Derecha e Izquierda -->
+    <a class="left carousel-control" href="#Slider" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#Slider" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Contenido -->
+<div class="home">
+    <div class="presentacion">
+        <div class="section-headline presentacion text-center">
+            <h2>Sobre nosotros</h2>
+        </div> 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="pres-cen">
+                        <div class="pres-junto">
+                            <img src="{% static 'img/prese.jpg' %}" width="540" height="270">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="pres-cen">
+                        <div class="pres-junto">
+                            <h3 class="sec-head">Luxury Hotel</h3>
+                            <p>
+                                Aquí en Luxury Hotel, acogemos a nuestros huéspedes con comodidad y valor, mejorando cada estadía a través de la singularidad de nuestra ciudad y equipo.
+                                Perfecto para viajeros de negocios y de placer, nuestro hotel boutique es una escapada cómoda en el corazón de Camboriú, Brasil.
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-check"></i> Interiores detallados
+                                </li>
+                                <li>
+                                    <i class="fa fa-check"></i> Vistas de lujo
+                                </li>
+                                <li>
+                                    <i class="fa fa-check"></i> Restaurantes temáticos
+                                </li>
+                                <li>
+                                    <i class="fa fa-check"></i> Complejo turístico
+                                </li>
+                                <li>
+                                    <i class="fa fa-check"></i> Exhuberantes jardines tropicales
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- End col-->
+            </div>
+        </div>
+    </div>
+
+    <div class="especificaciones">
+        <div class="section-headline especificaciones text-center">
+            <h2>Elígenos</h2>
+        </div> 
+        <div class="container">
+            <div class="col-sm-4">
+                <h3>Servicios modernos</h3>
+                <p>
+                    Luxury Hotel tiene todo lo que necesitas para tu viaje soñado: un gimnasio, restaurantes, campos de golf, cancha de tenis y un servicio de transporte local de cortesía son solo algunas de nuestras muchas ofertas.
+                </p>
+            </div>
+
+            <div class="col-sm-4">
+                <h3>Especiales y paquetes</h3>
+                <p>
+                    Crea recuerdos inolvidables en Camboriú por menos. Nuestras ofertas y promociones especiales en el hotel le permiten ahorrar en alojamiento, para que pueda disfrutar más de lo que el Resort tiene para ofrecer.
+                </p>
+            </div>
+
+            <div class="col-sm-4">
+                <h3>Vistas de lujo</h3>
+                <p>
+                    Los huéspedes pueden disfrutar de happy hour de cortesía todos los días en nuestras barras mirando el atardecer en nuestro Resort, o a un costado de la piscina disfrutando de la mejor música y ambiente. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="servicios">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="section-headline services-head text-center">
+                        <h2>Nuestros Servicios</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serv-det">
+                        <i class="fa fa-wifi fa-2x"></i>
+                        <h3>WI-FI</h3>
+                        <p>Nuestras instalaciones constan de puntos de acceso de WI-FI en todo el recinto para que estés siempre conectado.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                     <div class="serv-det">
+                        <i class="fa fa-thermometer-0 fa-2x"></i>
+                        <h3>ACONDICIONADO</h3>
+                        <p>Nuestras instalaciones cerradas cuentan con aire acondicionado para proporcionar la mejor experiencia.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serv-det">
+                        <i class="fa fa-phone fa-2x"></i>
+                        <h3>ROOM SERVICE</h3>
+                        <p>Contamos con un Room Service, solo tienes que ocupar el teléfono de la habitación y comunicarte con el lobby del Resort.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serv-det">
+                        <i class="fa fa-plus-square fa-2x"></i>
+                        <h3>SEGURO</h3>
+                        <p>Contamos con asistencia médica las 24 horas del día para asegurarte una estadía segura en nuestro Resort.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serv-det">
+                        <i class="fa fa-glass fa-2x"></i>
+                        <h3>BAR</h3>
+                        <p>Tenemos 8 barras libres a lo largo de nuestras instalaciones, solo tiene que portar el brazalete que te otorgarán en tu Check-in.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="serv-det">
+                        <i class="fa fa-cutlery fa-2x"></i>
+                        <h3>RESTAURANTES</h3>
+                        <p>Contamos con 3 restaurantes a lo largo del Resort con tenedor libre para poder disfrutar de la gastronomía que tenemos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

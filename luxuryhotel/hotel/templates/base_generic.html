@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block title %} <title>Luxury Hotel International</title> {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    {% load static %}
+    <link rel="icon" type="image/icon" href="{% static 'img/icono.ico' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    
+</head>
+
+<body>
+    {% block navbar %}
+    
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" id="reload"><span>L</span>uxury <span>H</span>otel</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="{% url 'index' %}" id="relin">Inicio</a></li>
+                <li><a href="{% url 'habitacion' %}">Hospedaje</a></li>
+                <li class="disabled"><a href="#">Actividades</a></li>
+                <li class="disabled"><a href="#">Paquetes</a></li>
+                {%if user.is_authenticated%}
+                    <li><a href="{% url 'clientes' %}">Clientes</a></li>
+                    <li><a href={% url 'habitacion-adm' %}>Habitacion</a></l>
+                {%else%}{%endif%}
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                
+                {%if user.is_authenticated %}
+
+                <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</a></li>
+
+                {% else %}
+
+                <li><a href="{% url 'cliente_create' %}"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+                <li><a href="{% url 'login' %}"><span class="glyphicon glyphicon-log-in"></span> Ingresa</a></li>
+
+                {% endif %}
+            </ul>
+        </div>
+    </nav>
+    {% endblock %}
+    
+    {% block content %}{% endblock  %}
+    
+    {% block footer %}
+    <footer>
+        <div class="fin">
+            <div class="container">
+                <div class="row">
+                    <!--COLUMNA 1-->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="tit-footer">
+                            <h2><span>L</span>uxury <span>H</span>otel</h2>
+                        </div>
+                        <div class="des-footer">
+                            <p>
+                                Luxury Hotel International es el único entre los veinte mayores grupos hoteleros internacionales con un origen vacacional y con el tamaño 
+                                ideal para combinar una excepcional hospitalidad con una gestión eficiente y cercana a sus stakeholders. Todo esto, unido a nuestra calidez 
+                                y pasión brasileña, nos hace únicos y diferentes.
+                            </p>
+                        </div>
+                        <div class="i-footer">
+                            <ul>
+                                <li><a href="{% url 'index' %}" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="{% url 'index' %}" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="{% url 'index' %}" target="_blank"><i class="fa fa-google"></i></a></li>
+                                <li><a href="{% url 'index' %}" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--COLUMNA 2-->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="tit-footer">
+                            <h3>Información</h3>
+                        </div>
+                        <div class="des-footer">
+                            <p>Desde sus inicios, en Luxury Hotel International hemos sabido construir un negocio de éxito basado en una manera única de entender el ocio
+                            <br>
+                            <br>
+                            <br>
+                            <p><span>Tel:</span> +56 22 856 9651</p>
+                            <p><span>Email:</span> Contacto@LuxuryHotel.com</p>
+                            <p><span>Horario:</span> 08:00 - 23:00</p>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!--COLUMNA 3-->
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                        <div class="tit-footer">
+                            <h3>Instagram</h3>
+                        </div>
+                        <div class="img-footer">
+                            <img src="{% static 'img/slider/sli3.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/luxury/1.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/slider/sli4.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/prese.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/slider/sli1.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/slider/sli2.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/slider/sli4.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/luxury/1.jpg' %}" width="97.76" height="48.98">
+                            <img src="{% static 'img/slider/sli3.jpg' %}" width="97.76" height="48.98">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fin-cr">
+            <div class="containter">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="copyright text-center">
+                        <p>&copy; Copyright <strong>Luxury Hotel</strong>. All Rights Reserved</p>
+                    </div>
+                    <div class="madeby text-center">
+                        <p>Diseñado por <b>Equipo 3</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+</body>
+
+</html>
