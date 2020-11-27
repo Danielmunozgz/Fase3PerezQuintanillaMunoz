@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Clientes registrados: </h1>
+
+    {% if user.is_authenticated %}
+        {% if cliente_list %}
+            <ul>
+                {% for cliente in cliente_list %}
+                    <li>
+                        <a href="{{ cliente.get_absolute_url }}"> {{cliente.rut}} </a> ({{cliente.nombres}} {{cliente.apellidos}})
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    {% endif %}
+{% endblock%}

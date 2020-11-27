@@ -1,0 +1,56 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% block title %} <title>Luxury Hotel International</title> {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    {% load static %}
+    <link rel="icon" type="image/icon" href="{% static 'img/icono.ico' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+    
+</head>
+
+<div classs="formulario-registroc">
+    <div class="container">
+        <div class="row">
+            <div class="section-headline registrarse text-center">
+                <h2>Registrarse</h2>
+            </div>
+            <div class="registrof col-lg-6 mx-auto">
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    <div style="font-size: 12px;">
+                        {{form.as_p}}
+                    </div>
+                    <div class="rbtn">
+                        <button type="submit">Guardar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-6 mx-auto">
+                <div class="crear-op">
+                    <div class="fb">
+                        <button onclick="refb()"><i class="fa fa-facebook"></i> Ingresa con Facebook</button>
+                    </div>
+                    <div class="ggp">
+                        <button onclick="reggp()"><i class="fa fa-google-plus"></i> Ingresa con Google+</button>
+                    </div>
+                    <div class="tw">
+                        <button onclick="retw()"><i class="fa fa-twitter"></i> Ingresa con Twitter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}

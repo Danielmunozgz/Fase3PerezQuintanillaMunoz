@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+{% load static %}
+
+<div class="section-headline">
+    <h2>Habitaciones registradas:</h2>
+    {% if user.is_staff %}
+        <a class="btn btn-primary" href="{% url 'habitacion_create' %}">Agregar Habitación</a>
+    {% endif %}
+</div>
+{% for habitacion in habitacion_list %}
+    <li>
+        <a href="{{habitacion.get_absolute_url}}"> {{habitacion.id_habitacion}} </a>
+    </li>
+{% endfor %}
+
+{% endblock%}
