@@ -30,7 +30,7 @@
                 <li class="disabled"><a href="#">Paquetes</a></li>
                 {%if user.is_authenticated%}
                     <li><a href="{% url 'clientes' %}">Clientes</a></li>
-                    <li><a href={% url 'habitacion-adm' %}>Habitacion</a></l>
+                    <li><a href={% url 'habitacion-adm' %}>Habitaciones</a></l>
                 {%else%}{%endif%}
             </ul>
             <ul class="nav navbar-nav navbar-right">

@@ -6,8 +6,8 @@
         <h2 class="section-headline">  {{cliente.rut}} </h2>
         
         {% if user.is_authenticated %}{% if user.is_staff %}
-            <a class="btn btn-default" href="{% url 'cliente_update' pk=cliente.pk %}"> Editar</a>
-            <a class="btn btn-default" href="{% url 'cliente_delete' pk=cliente.pk %}"> Eliminar</a>
+            <a class="btn btn-default" href="{% url 'cliente_update' pk=cliente.pk %}">Editar</a>
+            <a class="btn btn-default" href="{% url 'cliente_delete' pk=cliente.pk %}">Eliminar</a>
         {% endif %}{% endif %}
 
         <div class="row">

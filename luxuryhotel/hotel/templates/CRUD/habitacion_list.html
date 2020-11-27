@@ -3,7 +3,7 @@
 {% load static %}
 
 <div class="section-headline">
-    <h2>Habitaciones registradas:</h2>
+    <h2>Habitaciones Registradas:</h2>
     {% if user.is_staff %}
         <a class="btn btn-primary" href="{% url 'habitacion_create' %}">Agregar Habitación</a>
     {% endif %}

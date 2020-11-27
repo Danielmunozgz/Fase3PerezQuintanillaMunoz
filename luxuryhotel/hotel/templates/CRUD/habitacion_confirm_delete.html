@@ -1,0 +1,20 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+{% load static %}
+
+    {% if user.is_authenticated %}{% if user.is_staff %}
+        <div class="section-headline">
+            <h2> Borrar Habitación </h2>
+        </div>
+        <h3>¿Estás seguro que deseas borrar esta habitación?</h3>
+        <h4>Id Habitación: {{habitacion.id_habitacion}}</h4>
+        <h4>Id Tipo: {{habitacion.id_tipo}}</h4>
+        {% csrf_token %}
+        <div style="width: 50%;">
+            <a href="{% url 'habitacion-detail' habitacion.pk %}"class="btn btn-primary btn-xl" style="float: left;">Atras</a>
+            <button type="submit" class="save btn btn-primary btn-xl" style="float: right;">Borrar</button>
+        </div>
+    {% endif %}{% endif %}
+
+{% endblock %} 

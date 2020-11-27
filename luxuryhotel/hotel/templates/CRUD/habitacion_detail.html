@@ -6,9 +6,9 @@
         <h2 class="section-headline">  {{habitacion.rut}} </h2>
         
         {% if user.is_authenticated %}
-            <a class="btn btn-default" href="{% url 'habitacion_update' pk=habitacion.pk %}"> Editar</a>
+            <a class="btn btn-default" href="{% url 'habitacion_update' pk=habitacion.pk %}">Editar</a>
             {% if user.is_staff %}
-                <a class="btn btn-default" href="{% url 'habitacion_delete' pk=habitacion.pk %}"> Eliminar</a>
+                <a class="btn btn-default" href="{% url 'habitacion_delete' pk=habitacion.pk %}">Eliminar</a>
             {% endif %}
         {% endif %}
 
