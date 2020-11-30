@@ -1,6 +1,9 @@
-SuperUser:
+Credenciales:
 
-User: danielm
-Pass: 11992288hc
+Usuario: admin
+Contraseña: 1199228hc
 
-http://127.0.0.1:8000/hotel/
+Usuario: director
+Contraseña: segusuario
+
+http://127.0.0.1:8000/
