@@ -6,11 +6,12 @@
     <div class="section-headline cliente text-center">
         <h2 style="text-center"> CLIENTES REGISTRADOS:</h2>
     </div>
-    {% if user.is_authenticated %}
+    {% if user.is_staff %}
         <a class="btn btn-primary text-center" href="{% url 'cliente_create' %}">Agregar Cliente</a>
         <br>
         <br>
     {% endif %}
+    
     {% if user.is_authenticated %}
         {% if cliente_list %}
             <ul>
