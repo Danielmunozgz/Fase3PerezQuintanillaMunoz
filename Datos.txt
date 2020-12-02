@@ -1,7 +1,7 @@
 Credenciales:
 
 Usuario: admin
-Contraseña: 1199228hc
+Contraseña: 11992288hc
 
 Usuario: director
 Contraseña: segusuario

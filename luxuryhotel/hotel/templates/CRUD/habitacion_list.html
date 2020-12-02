@@ -1,17 +1,25 @@
 {% extends 'base_generic.html' %}
 {% block content %}
 {% load static %}
-
-<div class="section-headline">
-    <h2>Habitaciones Registradas:</h2>
+<div class="container">
+    <div class="section-headline habitacion text-center">
+        <h2>HABITACIONES REGISTRADAS:</h2>
+    </div>
     {% if user.is_staff %}
         <a class="btn btn-primary" href="{% url 'habitacion_create' %}">Agregar Habitación</a>
+        <br>
+        <br>
+    {% endif %}
+    {% if user.is_authenticated %}
+        {% if habitacion_list %}
+            <ul>
+                {% for habitacion in habitacion_list %}
+                    <li>
+                        <a href="{{habitacion.get_absolute_url}}"> Habitación : {{habitacion.id_habitacion}} </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
     {% endif %}
 </div>
-{% for habitacion in habitacion_list %}
-    <li>
-        <a href="{{habitacion.get_absolute_url}}"> {{habitacion.id_habitacion}} </a>
-    </li>
-{% endfor %}
-
 {% endblock%}

@@ -3,17 +3,26 @@
 {% block content %}
 {% load static %}
     <div class="container">
-        <h2 class="section-headline">  {{cliente.rut}} </h2>
+        <div class="section-headline cliente text-center">
+            <h2 style="text-center"> Detalle de cliente:</h2>
+        </div>
         
         {% if user.is_authenticated %}{% if user.is_staff %}
-            <a class="btn btn-default" href="{% url 'cliente_update' pk=cliente.pk %}">Editar</a>
-            <a class="btn btn-default" href="{% url 'cliente_delete' pk=cliente.pk %}">Eliminar</a>
+            <a class="btn btn-default text-center" href="{% url 'cliente_update' pk=cliente.pk %}">Editar</a>
+            <a class="btn btn-default text-center" href="{% url 'cliente_delete' pk=cliente.pk %}">Eliminar</a>
         {% endif %}{% endif %}
 
         <div class="row">
             <div class="col-md-6">
+                <h3>RUT: </h3> <p>{{cliente.rut}}</p>
                 <h3>NOMBRES: </h3> <p>{{cliente.nombres}}</p>
                 <h3>APELLIDOS: </h3> <p>{{cliente.apellidos}}</p>
+                <h3>PAÍS: </h3> <p>{{cliente.pais}}</p>
+                <h3>EDAD: </h3> <p>{{cliente.edad}}</p>
+                <h3>EMAIL: </h3> <p>{{cliente.email}}</p>
+                <h3>DIRECCIÓN: </h3> <p>{{cliente.direccion}}</p>
+                <h3>PASSWORD: </h3> <p>{{cliente.password}}</p>
             </div>
         </div>
+    </div>
 {% endblock %}
